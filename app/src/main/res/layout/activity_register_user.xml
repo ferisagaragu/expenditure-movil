@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="javabrain.org.expenditure.controller.RegisterUserActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titleTeVRU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Registra un nuevo usuario"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/userNameEdTRU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:hint="¿Que nombre de usuario tendras?"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/userNameHintTeVRU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:visibility="invisible"
+                android:textColor="@color/error"/>
+
+            <EditText
+                android:id="@+id/emailEdTRU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:hint="¿Cual es tu correo electronico?"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:id="@+id/emailHintTeVRU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:visibility="invisible"
+                android:textColor="@color/error"/>
+
+            <EditText
+                android:id="@+id/passwordEdTRU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:hint="¿Cual será tu contraseña?"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/passwordHintEdTRU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:visibility="invisible"
+                android:textColor="@color/error"/>
+
+            <EditText
+                android:id="@+id/nameEdTRU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:hint="¿Cuales son tus nombres?"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/nameHintEdTRU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:visibility="invisible"
+                android:textColor="@color/error"/>
+
+            <EditText
+                android:id="@+id/lastNameEdTRU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:hint="¿Cuales son tus apellidos?"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/lastNameHintEdTRU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:visibility="invisible"
+                android:textColor="@color/error"/>
+
+            <Button
+                android:id="@+id/registBtnRU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="Registrar usuario"
+                android:textColor="#FFF" />
+
+            <ProgressBar
+                android:id="@+id/registPrBRU"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

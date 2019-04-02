@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="javabrain.org.expenditure.controller.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_weight="1"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/account_plus_outline"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="213dp"
+        android:layout_marginTop="56dp">
+
+        <ImageView
+            android:id="@+id/iconImgMA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/account_heart" />
+
+        <EditText
+            android:id="@+id/userNameEdTMA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:inputType="textPersonName"
+            android:hint="Nombre de usuario" />
+
+        <EditText
+            android:id="@+id/passPsTMA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:inputType="textPassword"
+            android:hint="Contraseña"/>
+
+        <Button
+            android:id="@+id/loginBtnMA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:text="Inciar sesión"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="#FFF"/>
+
+        <ProgressBar
+            android:id="@+id/loginPrBMA"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/errorMsgTxVMA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/error_sesion"
+            android:textColor="@color/error"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,32 @@
+<resources>
+    <!--Titulos-->
+    <string name="app_name">Expenditure</string>
+
+    <!--Login-->
+    <string name="inactive_user">
+        El usuario con el que intentas iniciar sesion a sido desactivado.
+    </string>
+    <string name="error_sesion">
+        Error al iniciar sesion, usuario o contraseña invalidos,
+        esto tambien puede ser un problema en nuestros servidores.
+    </string>
+    <string name="start_sesion">
+        Sesión iniciada con
+    </string>
+    <string name="error_fields_sesion">
+        Los campos de usuario o contraseña no pueden ser vacios.
+    </string>
+
+    <!--Registrar usuario-->
+    <string name="hint_usernamereg">El nombre de usuario no puede ser vacio.</string>
+    <string name="hint_emailreg">El correo electronico no puede ser vacio.</string>
+    <string name="hint_passwordreg">La contraseña no puede ser vacia.</string>
+    <string name="hint_namereg">Los nobres no pueden ser vacios.</string>
+    <string name="hint_lastnamereg">Los apellidos no pueden ser vacios.</string>
+    <string name="hint_moneyreg">El dinero no puede ser vacio ni menor o igual a 0.</string>
+    <string name="susses_register">El usuario a sido registrado con exito.</string>
+    <string name="error_register">El usuario o correo ya han sido registrados.</string>
+
+    <!--Peticiones-->
+    <string name="host_name">http://192.168.11.115/expenditure-api/res</string>
+</resources>
