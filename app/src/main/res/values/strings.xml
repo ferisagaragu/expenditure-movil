@@ -27,6 +27,9 @@
     <string name="susses_register">El usuario a sido registrado con exito.</string>
     <string name="error_register">El usuario o correo ya han sido registrados.</string>
 
+    <!--Crear un nuevo mes-->
+    <string name="error_moth">Error al registrar el nuevo periodo mensual.</string>
+
     <!--Peticiones-->
-    <string name="host_name">http://192.168.11.115/expenditure-api/res</string>
+    <string name="host_name">http://192.168.11.115/expenditure-web/res</string>
 </resources>

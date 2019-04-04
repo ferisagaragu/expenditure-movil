@@ -1,5 +1,6 @@
 package javabrain.org.expenditure.persistence;
 
+import javabrain.org.expenditure.pojo.Month;
 import javabrain.org.expenditure.pojo.User;
 
 /**
@@ -8,4 +9,5 @@ import javabrain.org.expenditure.pojo.User;
 
 public class Global {
     public static User user = new User();
+    public static Month month = new Month();
 }

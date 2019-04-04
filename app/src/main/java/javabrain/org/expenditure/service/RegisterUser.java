@@ -1,6 +1,5 @@
 package javabrain.org.expenditure.service;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -15,7 +14,6 @@ import java.util.Map;
 
 import javabrain.org.expenditure.R;
 import javabrain.org.expenditure.api.PetitionApi;
-import javabrain.org.expenditure.controller.RegisterUserActivity;
 
 /**
  * Created by Fernando García on 02/04/2019.

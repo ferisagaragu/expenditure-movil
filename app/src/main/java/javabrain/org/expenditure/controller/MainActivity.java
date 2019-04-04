@@ -11,7 +11,13 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
 import javabrain.org.expenditure.R;
+import javabrain.org.expenditure.api.FileApi;
+import javabrain.org.expenditure.api.JsonApi;
+import javabrain.org.expenditure.api.OnReadFile;
 import javabrain.org.expenditure.service.Login;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         loginPrBMA = (ProgressBar) findViewById(R.id.loginPrBMA);
         errorMsgTxVMA = (TextView) findViewById(R.id.errorMsgTxVMA);
         registerUser = new Intent(MainActivity.this,RegisterUserActivity.class);
-        expenditureIndex = new Intent(MainActivity.this,ExpenditureIndex.class);
+        expenditureIndex = new Intent(MainActivity.this,ExpenditureIndexActivity.class);
 
         setSupportActionBar(toolbar);
 
@@ -52,13 +58,17 @@ public class MainActivity extends AppCompatActivity {
         loginBtnMA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!userNameEdTMA.getText().toString().isEmpty() && !passPsTMA.getText().toString().isEmpty()) {
-                    Login login = new Login(MainActivity.this, userNameEdTMA, passPsTMA, loginBtnMA, loginPrBMA, errorMsgTxVMA, expenditureIndex);
-                    login.execute();
-                } else {
-                    errorMsgTxVMA.setVisibility(View.VISIBLE);
-                    errorMsgTxVMA.setText(MainActivity.this.getString(R.string.error_fields_sesion));
-                }
+                login();
+            }
+        });
+
+        FileApi.read(this, "userData.json", new OnReadFile() {
+            @Override
+            public void onRead(Object o) {
+                JSONObject object = (JSONObject) ((JSONArray) JsonApi.parser(o.toString())).get(0);
+                userNameEdTMA.setText(object.get("user").toString());
+                passPsTMA.setText(object.get("password").toString());
+                login();
             }
         });
 
@@ -72,4 +82,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {}
+
+    private void login() {
+        if (!userNameEdTMA.getText().toString().isEmpty() && !passPsTMA.getText().toString().isEmpty()) {
+            Login login = new Login(MainActivity.this, userNameEdTMA, passPsTMA, loginBtnMA, loginPrBMA, errorMsgTxVMA, expenditureIndex);
+            login.execute();
+        } else {
+            errorMsgTxVMA.setVisibility(View.VISIBLE);
+            errorMsgTxVMA.setText(MainActivity.this.getString(R.string.error_fields_sesion));
+        }
+    }
 }

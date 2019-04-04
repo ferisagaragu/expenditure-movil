@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/expenditure.iml" filepath="$PROJECT_DIR$/expenditure.iml" />
+      <module fileurl="file://C:\GitKraken2019\expenditure-movil\expenditure.iml" filepath="C:\GitKraken2019\expenditure-movil\expenditure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/expenditure-movil.iml" filepath="$PROJECT_DIR$/expenditure-movil.iml" />
     </modules>
   </component>
 </project>

@@ -58,6 +58,30 @@ public class FileApi {
         return out;
     }
 
+    public static void read(Context context, String filename, OnReadFile onReadFile) {
+
+        String out = "";
+
+        if (exist(context, filename)) {
+            try {
+                InputStreamReader file = new InputStreamReader(context.openFileInput(filename));
+                BufferedReader br = new BufferedReader(file);
+                String linea = br.readLine();
+                String todo = "";
+                while (linea != null) {
+                    todo = todo + linea + "\n";
+                    linea = br.readLine();
+                }
+
+                out = todo;
+                br.close();
+                file.close();
+
+            } catch (IOException e) {}
+        }
+        onReadFile.onRead(out);
+    }
+
     public static void download(Context context,String url,String name) {
         try (BufferedInputStream inputStream = new BufferedInputStream(new URL(url).openStream());
              FileOutputStream fileOS = new FileOutputStream(name)) {
