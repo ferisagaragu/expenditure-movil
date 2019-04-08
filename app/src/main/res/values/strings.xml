@@ -21,7 +21,7 @@
     <string name="hint_usernamereg">El nombre de usuario no puede ser vacio.</string>
     <string name="hint_emailreg">El correo electronico no puede ser vacio.</string>
     <string name="hint_passwordreg">La contraseña no puede ser vacia.</string>
-    <string name="hint_namereg">Los nobres no pueden ser vacios.</string>
+    <string name="hint_namereg">Los nombres no pueden ser vacios.</string>
     <string name="hint_lastnamereg">Los apellidos no pueden ser vacios.</string>
     <string name="hint_moneyreg">El dinero no puede ser vacio ni menor o igual a 0.</string>
     <string name="susses_register">El usuario a sido registrado con exito.</string>
@@ -32,4 +32,16 @@
 
     <!--Peticiones-->
     <string name="host_name">http://192.168.11.115/expenditure-web/res</string>
+
+    <!--Registrar un gasto-->
+    <string-array name="expenditures_type">
+        <item>Pagar ahora mismo</item>
+        <item>Dividir pago en el mismo mes</item>
+        <item>Pagar perpetuamente al mes</item>
+        <item>Pagar a varios meses</item>
+    </string-array>
+    <string name="hint_expenditure_name">El nombre del gasto no puede ser vacio.</string>
+    <string name="hint_expenditure">El gasto no puede ser vacio, ni igual o menor a 0.</string>
+
+
 </resources>

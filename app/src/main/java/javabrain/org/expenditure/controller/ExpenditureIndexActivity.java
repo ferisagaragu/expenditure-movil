@@ -1,5 +1,6 @@
 package javabrain.org.expenditure.controller;
 
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,6 +26,8 @@ public class ExpenditureIndexActivity extends AppCompatActivity {
     private TextView salaryTeVEI;
     private FloatingActionButton registBtnEI;
 
+    private Intent registerExpenditure;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,8 +41,7 @@ public class ExpenditureIndexActivity extends AppCompatActivity {
         salaryTeVEI = (TextView) findViewById(R.id.salaryTeVEI);
         registBtnEI = (FloatingActionButton) findViewById(R.id.registBtnEI);
 
-        CreateMonth createMonth = new CreateMonth(this,loadExpenditurePrBEI,salaryContentLiLEI,contentLiLEI,salaryTeVEI);
-        createMonth.execute(Global.user.getId());
+        registerExpenditure = new Intent(ExpenditureIndexActivity.this, RegisterExpenditureActivity.class);
 
         saveSalaryBtnEI.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,10 +50,20 @@ public class ExpenditureIndexActivity extends AppCompatActivity {
                 updateSalary.execute(Global.user.getId());
             }
         });
+
+        registBtnEI.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ExpenditureIndexActivity.this.startActivity(registerExpenditure);
+            }
+        });
+
     }
 
     @Override
-    public void onBackPressed() {
-        //super.onBackPressed();
+    protected void onResume() {
+        CreateMonth createMonth = new CreateMonth(this,loadExpenditurePrBEI, salaryContentLiLEI, contentLiLEI, salaryTeVEI);
+        createMonth.execute(Global.user.getId());
+        super.onResume();
     }
 }

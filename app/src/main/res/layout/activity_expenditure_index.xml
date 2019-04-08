@@ -81,8 +81,8 @@
                         app:srcCompat="@drawable/credit_card_settings" />
 
                 </LinearLayout>
-
             </LinearLayout>
+
         </ScrollView>
 
     </LinearLayout>
