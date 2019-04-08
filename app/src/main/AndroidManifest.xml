@@ -22,7 +22,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".controller.RegisterUserActivity" />
-        <activity android:name=".controller.ExpenditureIndexActivity"></activity>
+        <activity android:name=".controller.ExpenditureIndexActivity" />
+        <activity android:name=".controller.RegisterExpenditureActivity"></activity>
     </application>
 
 </manifest>
